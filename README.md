@@ -1,6 +1,6 @@
 # NodeJS static file server
 
-This is another NodeJS static file server that use Express and is designed to run with a minimal configuration and minimal resources (image size less than 50MB)
+This is another NodeJS static file server that use Express and is designed to run with a minimal configuration and minimal resources (image size less than 60MB)
 
 ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/diegorivas89/static-file-server?sort=date) ![](https://img.shields.io/badge/licence-MIT-green)
 
