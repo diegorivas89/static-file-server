@@ -2,6 +2,8 @@
 
 This is another NodeJS static file server that use Express and is designed to run with a minimal configuration and minimal resources (image size less than 50MB)
 
+![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/diegorivas89/static-file-server?sort=date) ![](https://img.shields.io/badge/licence-MIT-green)
+
 ## Environment variables
 - `STATIC_ROOT`: Root directory to server files
 - `PORT`: Port where the server will be running (default is 3000)
