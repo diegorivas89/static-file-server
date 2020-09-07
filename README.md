@@ -7,28 +7,26 @@ This is another NodeJS static file server that use Express and is designed to ru
 ## Environment variables
 - `STATIC_ROOT`: Root directory to server files
 - `PORT`: Port where the server will be running (default is 3000)
+- `HOST`: Hostname for binding (default accept any incoming HTTP request)
+- `CORS`: Set to `true` if you want to enable CORS from any domain (default is false)
 
 ## Execution
-After cloning the repo, you need to install dependencies
+After cloning the repo, you need to install dependencies and execute the server
 ```bash
-npm install
-```
-and you could run it by executing the following command
-```bash
-STATIC_ROOT=/my/project/directory/dist node index.js
+npm install && STATIC_ROOT=/my/project/directory/dist node index.js
 ```
 
 ### Docker
-If you want to run with docker you could do the following steps
-#### 1) Build the image with:
+#### Building the image locally
+If you want to run with docker building the image from scratch you need to run
 ```bash
 docker build -t static-file-server:v0.1 .
 ```
-#### 2) Run it:
+and then run it by executing
 ```bash
-docker run -e STATIC_ROOT=/my/project/directory/dist -p 8001:3000 -d static-file-server:v0.1
+docker run -e STATIC_ROOT=/my/project/directory/dist -p 8001:3000 -d static-file-server:latest
 ```
-Or you could use the image directly from Docker Hub running
+#### Using image from Docker Hub
 ```bash
-docker run -e STATIC_ROOT=/my/project/directory/dist -e PORT=8001 -p 8001:8001 -d diegorivas89/static-file-server:v0.2
+docker run -e STATIC_ROOT=/my/project/directory/dist -e PORT=8001 -p 8001:8001 -d diegorivas89/static-file-server:latest
 ```
